@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./styles/style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <title>Pseudoclases.</title>
+</head>
+<body>
+
+    <h1> Pseudoclases. </h1>
+    <div class="container-fluid">
+        <div class="row justify-content-center">
+            <div class="col-12">
+                <h2> Active:</h2>
+                <a href="#" class="active"> Clic xd</a>
+            </div>
+            <div class="col-12">
+                <h2> Checked:</h2>
+                <div>
+                    <input type="radio" name="my-input" id="si">
+                    <label for="si">Si</label>
+                  
+                    <input type="radio" name="my-input" id="no">
+                    <label for="no">No</label>
+                  </div>
+            </div>
+            <div class="col-12">
+                <h2> Default</h2>
+                <input type="radio" name="genero" id="uno">
+                <label for="uno">Hombre.</label>
+
+                <input type="radio" name="genero" id="dos" checked>
+                <label for="dos">Mujer</label>
+            </div>
+            <div class="col-12">
+                <h2> Dir()*. </h2>
+                <div dir="rtl"> Holas. </div>
+            </div>
+            <div class="col-12">
+                <h2> Disabled: </h2>
+                <input type="text" placeholder="Nombre" disabled>
+            </div>
+            <div class="col-12">
+                <h2> Empty:</h2>
+                <div class="empty"></div>
+                <div class="empty">sis</div>
+            </div>
+            <div class="col-12">
+                <h2> Enabled: </h2>
+                <label for="FirstField"> Habilitado</label>
+                <input type="text" id="FirstField"><br>
+
+                <label for="SecondField"> Deshabilitado</label>
+                <input type="text" id="SecondField"  disabled="disabled"><br>
+            </div>
+            <div class="col-12">
+                <h2> First*: </h2>
+                <p class="first">Primera página.</p>
+                <p class="first">Segunda página.</p>
+                <button>Imprimir!</button>
+                <script>
+                    document.querySelector("button").onclick = function () {
+                    window.print();
+                    }
+                </script>
+            </div>
+            <div class="col-12">
+                <h2> First child:</h2>
+                <div>
+                    <p class="first_child">¡Este texto está seleccionado!</p>
+                    <p class="first_child">Este texto no está seleccionado.</p>
+                </div>
+            </div>
+            <div class="col-12">
+                <h2> First of type: </h2>
+                <p class="first_of_type">¡Este texto está seleccionado!</p>
+                <p class="first_of_type">Este texto no está seleccionado.</p>
+            </div>
+            <div class="col-12">
+                <h2> Fullscreen*:</h2>
+                <div class="fullscreen"> Holas </div>
+            </div>
+            <div class="col-12">
+                <h2>Focus: </h2>
+                <input class="focus" value="Uno"><br>
+                <input class="focus" value="Dos">
+            </div>
+            <div class="col-12">
+                <h2> Hover: </h2>
+                <a href="#" class="hover"> holis.</a>
+            </div>
+            <div class="col-12">
+                <h2> Indeterminate: </h2>
+                <div>
+                    <input class="indeterminate" type="checkbox" id="checkbox">
+                    <label for="checkbox"> Color </label>
+                </div>
+                <script>
+                    var inputs = document.getElementsByClassName("indeterminate");
+
+                    for (var i = 0; i < inputs.length; i++) {
+                    inputs[i].indeterminate = true;
+                    }
+                </script>
+            </div>
+            <div class="col-12">
+                <h2> In range: </h2>
+                <input id="inRange" name="inRange" type="number" placeholder="1 a 10" min="1" max="10" value="12">
+            </div>
+            <div class="col-12">
+                <h2> Invalid: </h2>
+                <input type="email" id="email_input" required/>
+            </div>
+            <div class="col-12">
+                <h2> Lang(): </h2>
+                <div lang="en"><q>Esta cita en inglés tiene una cita <q>anidada</q> adentro.</q></div>
+                <div lang="fr"><q>Esta cita en francés tiene una cita <q>anidada</q> adentro.</q></div>
+                <div lang="de"><q>Esta cita en aleman tiene una cita <q>anidada</q> adentro.</q></div>
+            </div>
+            <div class="col-12">
+                <h2> Last child: </h2>
+                <p class="last_child"> Holas.</p>
+                <p class="last_child"> Chaos.</p>
+            </div>
+            <div class="col-12">
+                <h2> Last of type: </h2>
+                <p class="last_of_type"> Holas.</p>
+                <p class="last_of_type"> Chaos.</p>
+                <span> Este no  </span>
+            </div>
+            <div class="col-12">
+                <h2> Left: </h2>
+            </div>
+            <div class="col-12">
+                <h2> Link: </h2>
+                <a class="link" href="https://github.com/RuisuEurimonio"> Github. </a>
+            </div>
+            <div class="col-12"> 
+                <h2> Not(): </h2>
+                <p class="not"> Texto </p>
+                <p class="not notnot"> Texto </p>
+                <p class="not"> Texto </p>
+            </div>
+            <div class="col-12"> 
+                <h2> Nth child: </h2>
+                <p class="nth"> Texto </p>
+                <p class="nth"> Texto </p>
+                <p class="nth"> Texto </p>
+            </div>
+            <div class="col-12"> 
+                <h2> Nth last child: </h2>
+                <p class="nth_last"> Texto </p>
+                <p class="nth_last"> Texto </p>
+                <p class="nth_last"> Texto </p>
+                <p class="nth_last"> Texto </p>
+            </div>
+            <div class="col-12"> 
+                <h2> Nth last of type: </h2>
+                <p class="nth_last_type"> Texto </p>
+                <p class="nth_last_type"> Texto </p>
+                <p class="nth_last_type"> Texto </p>
+                <p class="nth_last_type"> Texto </p>
+            </div>
+            <div class="col-12"> 
+                <h2> Nth of type: </h2>
+                <p class="nth_type"> Texto </p>
+                <p class="nth_type"> Texto </p>
+                <p class="nth_type"> Texto </p>
+                <p class="nth_type"> Texto </p>
+            </div>
+
+        </div>
+    </div>
+
+</body>
+
+
